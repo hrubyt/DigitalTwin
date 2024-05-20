@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class CNC_Workholder : MonoBehaviour {
     [SerializeField] private bool enable_movement = true;
 
@@ -77,12 +77,12 @@ public class CNC_Workholder : MonoBehaviour {
     }
 }
 
-/*
+*/
 public class CNC_Workholder : MonoBehaviour
 {
-    [SerializeField] private bool enable_movemet = false;
+    [SerializeField] private bool enable_movemet = true;
 
-    [SerializeField] public float gapSize = 1.0f;
+    [SerializeField] public float gapSize = 0.0f;
 
     public GameObject wLeft;
     public GameObject wRight;
@@ -112,4 +112,3 @@ public class CNC_Workholder : MonoBehaviour
 
     }
 }
-*/

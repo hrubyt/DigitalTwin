@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cube_Attacher : MonoBehaviour {
 
     // Reference to cube
-    private GameObject cube; 
+    public GameObject cube; 
     public GameObject cncDisc; 
     public GameObject robotGripper;
 
@@ -25,22 +25,30 @@ public class Cube_Attacher : MonoBehaviour {
     */
 
     void Update() {
+
+        // pokud kolize gripper kostka
+
+        // kolize cnc kostka
+
+
+
         if (cubeSpawner.isSpawned) {
             // Get reference to cube
             if (cube != cubeSpawner.spawnedCube) {
             cube = cubeSpawner.spawnedCube;
             }           
             if (dettach) {
-                        DetachCube();
-                    }
-                    if (attach_Gripper) {
-                        DetachCube();
-                        AttachCube(robotGripper);
-                    } 
-                    if (attach_CNC) {
-                        DetachCube();
-                        AttachCube(cncDisc);
-                    }  
+                DetachCube();
+            }
+            if (attach_CNC) {
+                DetachCube();
+                AttachCube(cncDisc);
+            } 
+            else if (attach_Gripper) {
+                DetachCube();
+                AttachCube(robotGripper);
+            } 
+                     
         }
                
     }

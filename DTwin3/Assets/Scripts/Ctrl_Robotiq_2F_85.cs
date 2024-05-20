@@ -3,6 +3,13 @@ using UnityEngine;
 using UnityEditor;
 
 public class Ctrl_Robotiq_2F_85 : MonoBehaviour {
+    // Public variables.
+    public bool start_movemet;
+    //  Input motion parameters.
+    public float gripper_speed;
+    public float gripper_stroke;
+
+
     // Private constants.
     //  The motion parameters of the Robotiq 2F-85 end-effector.
     //      Stroke in mm.
@@ -31,11 +38,7 @@ public class Ctrl_Robotiq_2F_85 : MonoBehaviour {
     //  Others.
     private int ctrl_state;
 
-    // Public variables.
-    public bool start_movemet;
-    //  Input motion parameters.
-    public float speed;
-    public float stroke;
+    
 
 #if UNITY_EDITOR
     // The [Read-only] attributes that are read-only in the Unity Inspector.
@@ -67,8 +70,8 @@ public class Ctrl_Robotiq_2F_85 : MonoBehaviour {
         switch (ctrl_state) {
             case 0: {
                     // If the values are out of range, clamp them.
-                    __stroke = Mathf.Clamp(stroke, s_min, s_max);
-                    __speed = Mathf.Clamp(speed, v_min, v_max);
+                    __stroke = Mathf.Clamp(gripper_stroke, s_min, s_max);
+                    __speed = Mathf.Clamp(gripper_speed, v_min, v_max);
 
                     if (start_movemet == true) {
                         ctrl_state = 1;

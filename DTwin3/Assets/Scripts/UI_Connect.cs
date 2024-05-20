@@ -25,12 +25,14 @@ public class UI_Connect : MonoBehaviour
     }
     private void Update() {
         string ip_adress = inputField_IPadress.text;
+        GlobalVariables_Main_Control.opcua_config[0] = ip_adress; // propojeni s OPC UA serverem IP adresy
         // dosazeni inputu do promenne
         btn_connect.onClick.AddListener(() => Connect(ip_adress));
 
         btn_disconnect.onClick.AddListener(() => Disconnect(ip_adress));
 
         btn_deleteUI.onClick.AddListener(() => CloseUI(ui_connect));
+        
 
     }
     //Functions for buttons
@@ -41,6 +43,8 @@ public class UI_Connect : MonoBehaviour
     void Connect(string connection_adress) {
         if (IsIPAddress(connection_adress)) {
             Debug.Log("Connecting to adress: " + connection_adress); // výpis ulozeného textu pro kontrolu
+            GlobalVariables_Main_Control.connect = true;
+            GlobalVariables_Main_Control.disconnect = false;
         } else {
             Debug.Log("The text entered is not a valid IP address: " + connection_adress); // vzpis chybové zprávy
         }
@@ -49,6 +53,8 @@ public class UI_Connect : MonoBehaviour
     
     void Disconnect(string connection_adress) {
         Debug.Log("Disconnecting from adress: " + connection_adress);
+        GlobalVariables_Main_Control.connect = false;
+        GlobalVariables_Main_Control.disconnect = true;
     }
 
     private bool IsIPAddress(string text) {

@@ -44,7 +44,7 @@ public class UI_UR10 : MonoBehaviour {
         j5TMP.text = ur10Instance.rot_j5.ToString();
         j6TMP.text = ur10Instance.rot_j6.ToString();
 
-        strokeTMP.text = robotiqInstance.stroke.ToString();
+        strokeTMP.text = robotiqInstance.gripper_stroke.ToString();
     }
 
     void SwitchUI(GameObject ui_open, GameObject ui_close) {

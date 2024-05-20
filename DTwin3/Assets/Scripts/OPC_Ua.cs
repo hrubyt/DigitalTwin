@@ -1,6 +1,7 @@
-/*
+
 // -------------------- Libraries ----------------- //
 // -------------------- System -------------------- //
+
 using System;
 using System.Threading;
 // -------------------- Unity -------------------- //
@@ -21,64 +22,108 @@ public static class GlobalVariables_Main_Control {
 
 public static class GlobalVariables_OPC_UA_client {
 
-    // ns=3
+    // Test
+    public static float rot_j1;// = 90f;
+    public static NodeId rot_j1_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j1"; //prepsat podle struktury na serveru
 
-    // Node Id
-    public static NodeId[] xyz_manip_pos_node = new NodeId[3] { "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.X.actual_position", "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.Y.actual_position", "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.Z.actual_position" };
+    //
+    /*
+    // gripper
+    public static float gripper_speed;
+    public static float gripper_stroke;
+
+    // bool signal sverak
+    public static bool gapSize;
+
+    // dvere zavrit otevrit //1signal
+    public static bool door_signal;
+
+    // Node Ids
+    public static NodeId gripper_speed_node = "ns=3;s=::AsGlobalPV:dT_Main.gripper.gripper_speed";
+    public static NodeId gripper_stroke_node = "ns=3;s=::AsGlobalPV:dT_Main.gripper.gripper_stroke";
+    public static NodeId gapSize_node = "ns=3;s=::AsGlobalPV:dT_Main.gripper.signal";
+    public static string door_signal_node = "ns=3;s=::AsGlobalPV:dT_Main.door.signal";
+
+    // cube position, scale, rotation
+    public static float cube_position;
+    public static float cube_scale;
+    public static float cube_rotation;
+
+    // Node cube position, scale, rotation
+    public static string cube_position_node = "ns=3;s=::AsGlobalPV:dT_Main.cube.position";
+    public static string cube_scale_node = "ns=3;s=::AsGlobalPV:dT_Main.cube.scale";
+    public static string cube_rotation_node = "ns=3;s=::AsGlobalPV:dT_Main.cube.rotation";
+
+    // additional variables
+    public static float pos_Xaxis;// = 0.0f;
+    public static float pos_Yaxis;// = 0.0f;
+    public static float pos_Zaxis;// = 0.0f;
+    public static float rot_Aaxis;// = 0.0f;
+    public static float rot_Caxis;// = 0.0f;
+
+    // Nodes for additional variables
+    public static NodeId pos_Xaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.pos_Xaxis";
+    public static NodeId pos_Yaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.pos_Yaxis";
+    public static NodeId pos_Zaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.pos_Zaxis";
+    public static NodeId rot_Aaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_Aaxis";
+    public static NodeId rot_Caxis_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_Caxis";
+
+    // Rychlosti
+    public static float speed_Xaxis;// = 0.5f;
+    public static float speed_Yaxis;// = 0.5f;
+    public static float speed_Zaxis;// = 0.5f;
+    public static float speed_Aaxis;// = 0.5f;
+    public static float speed_Caxis;// = 0.5f;
+
+    // Nodes for speed variables
+    public static NodeId speed_Xaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Xaxis";
+    public static NodeId speed_Yaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Yaxis";
+    public static NodeId speed_Zaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Zaxis";
+    public static NodeId speed_Aaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Aaxis";
+    public static NodeId speed_Caxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Caxis";
 
 
 
-    // Float
+    // ------------------------------ UR10 ----------------------------- //
+    // Rotation variables
+    public static float rot_j1;// = 90f;
+    public static float rot_j2;// = 180f;
+    public static float rot_j3;// = 180f;
+    public static float rot_j4;// = 180f;
+    public static float rot_j5;// = 180f;
+    public static float rot_j6;// = 180f;
 
+    // Nodes for rotation variables
+    public static NodeId rot_j1_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j1";
+    public static NodeId rot_j2_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j2";
+    public static NodeId rot_j3_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j3";
+    public static NodeId rot_j4_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j4";
+    public static NodeId rot_j5_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j5";
+    public static NodeId rot_j6_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j6";
 
+    // Speed of joints
+    public static float speed_j1;// = 0.5f;
+    public static float speed_j2;// = 0.5f;
+    public static float speed_j3;// = 0.5f;
+    public static float speed_j4;// = 0.5f;
+    public static float speed_j5;// = 0.5f;
+    public static float speed_j6;// = 0.5f;
 
+    // Nodes for speed of joints variables
+    public static NodeId speed_j1_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j1";
+    public static NodeId speed_j2_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j2";
+    public static NodeId speed_j3_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j3";
+    public static NodeId speed_j4_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j4";
+    public static NodeId speed_j5_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j5";
+    public static NodeId speed_j6_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j6";
+    
 
+    */
 
-
-
-
-    // -------------------- XYZ Manipulator -------------------- //
-    //  NodeId  //
-    public static NodeId[] xyz_manip_pos_node = new NodeId[3] { "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.X.actual_position", "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.Y.actual_position", "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.Z.actual_position" };
-    public static NodeId[] xyz_manip_vel_node = new NodeId[3] { "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.X.actual_velocity", "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.Y.actual_velocity", "ns=6;s=::AsGlobalPV:dT_Main.xyz_manipulator.Z.actual_velocity" };
-    //  Float  //
-    public static float[] xyz_manip_pos = new float[3];
-    public static float[] xyz_manip_vel = new float[3];
-
-    // -------------------- Camera Conveyor  -------------------- //
-    //  NodeId  //
-    public static NodeId cam_conv_x_pos_node = "ns=6;s=::AsGlobalPV:dT_Main.camera_conveyor.X.actual_position";
-    public static NodeId cam_conv_x_vel_node = "ns=6;s=::AsGlobalPV:dT_Main.camera_conveyor.X.actual_velocity";
-    //  Float  //
-    public static float cam_conv_x_pos;
-    public static float cam_conv_x_vel;
-    // -------------------- Camera Control -------------------- //
-    //  NodeId  //
-    public static NodeId camera_node = "ns=6;s=::AsGlobalPV:dT_Main.camera.scan";
-    //  Float  //
-    public static bool camera;
-    // -------------------- Cube Transform (Main) -------------------- //
-    //  NodeId  //
-    public static NodeId[] gripp_node = new NodeId[2] { "ns=6;s=::AsGlobalPV:dT_Main.service.object.write.attach", "ns=6;s=::AsGlobalPV:dT_Main.service.object.write.detach" };
-    public static NodeId reset_param_node = "ns=6;s=::AsGlobalPV:dT_Main.service.object.write.reset";
-    public static NodeId set_obj_id_node = "ns=6;s=::AsGlobalPV:dT_Main.service.object.write.set_object_id";
-    // Read {OpCUA B&R -> Unity}
-    //  Bool  //
-    public static bool gripp_attach, gripp_detach;
-    public static bool reset_param;
-    // Int //
-    public static int set_obj_id;
-    // Write {Unity -> OpcUA B&R}
-    // String //
-    public static string obj_id_w_node = "ns=6;s=::AsGlobalPV:dT_Main.service.object.read.object_id";
-    public static string obj_type_w_node = "ns=6;s=::AsGlobalPV:dT_Main.service.object.read.object_type";
-    // Int //
-    public static int main_obj_id;
-    public static int main_obj_type;
 }
 
 
-public class br_data_processing : MonoBehaviour {
+public class data_processing : MonoBehaviour {
     // -------------------- ApplicationConfiguration -------------------- //
     private ApplicationConfiguration client_configuration_r = new ApplicationConfiguration();
     private ApplicationConfiguration client_configuration_w = new ApplicationConfiguration();
@@ -89,21 +134,20 @@ public class br_data_processing : MonoBehaviour {
     // -------------------- Thread -------------------- //
     private Thread opcua_client_r_Thread, opcua_client_w_Thread;
     // -------------------- Int -------------------- //
-    private int main_br_state = 0;
+    private int main_state = 0;
 
     // ------------------------------------------------------------------------------------------------------------------------//
     // ------------------------------------------------ INITIALIZATION {START} ------------------------------------------------//
     // ------------------------------------------------------------------------------------------------------------------------//
     void Start() {
         // PLC IP Address
-        GlobalVariables_Main_Control.opcua_config[0] = "127.0.0.1";
+        GlobalVariables_Main_Control.opcua_config[0] = "192.168.0.10"; //opc.tcp://192.168.0.10:4840
         // OPC UA Port Number
         GlobalVariables_Main_Control.opcua_config[1] = "4840";
 
-        // ------------------------ Initialization { B&R/SMC Digital Twin {Control Robot} - OPC UA Read Data } ------------------------//
+        // Initiation
         // Control -> Start {Read OPCUA data}
         GlobalVariables_Main_Control.enable_r = true;
-        // ------------------------ Initialization { B&R/SMC Digital Twin {Control Robot} - OPC UA Write Data } ------------------------//
         // Control -> Start {Read OPCUA data}
         GlobalVariables_Main_Control.enable_w = true;
 
@@ -113,7 +157,7 @@ public class br_data_processing : MonoBehaviour {
     // ------------------------------------------------ MAIN FUNCTION {Cyclic} ------------------------------------------------ //
     // ------------------------------------------------------------------------------------------------------------------------ //
     private void Update() {
-        switch (main_br_state) {
+        switch (main_state) {
             case 0: {
                     // ------------------------ Wait State {Disconnect State} ------------------------//
                     if (GlobalVariables_Main_Control.connect == true) {
@@ -135,7 +179,7 @@ public class br_data_processing : MonoBehaviour {
                         opcua_client_w_Thread.Start();
 
                         // go to connect state
-                        main_br_state = 1;
+                        main_state = 1;
                     }
                 }
                 break;
@@ -157,7 +201,7 @@ public class br_data_processing : MonoBehaviour {
                         }
                         if (opcua_client_r_Thread.IsAlive == false && opcua_client_w_Thread.IsAlive == false) {
                             // go to initialization state {wait state -> disconnect state}
-                            main_br_state = 0;
+                            main_state = 0;
                         }
                     }
                 }
@@ -197,39 +241,59 @@ public class br_data_processing : MonoBehaviour {
             // OPCUa client configuration
             client_configuration_r = opcua_client_configuration();
             // Establishing communication
-            client_end_point_r = CoreClientUtils.SelectEndpoint("opc.tcp://" + ip_adr + ":" + port_adr, useSecurity: false, operationTimeout: 5000);
+            client_end_point_r = CoreClientUtils.SelectEndpoint("opc.tcp://" + ip_adr + ":" + port_adr, useSecurity: false); // , operationTimeout: 5000);
             // Create session
             client_session_r = opcua_create_session(client_configuration_r, client_end_point_r);
         }
 
         // Threading while {read data}
         while (GlobalVariables_Main_Control.enable_r) {
-            // ---------- FLOAT ---------- //
-            // Position / Velocity - Camera Conveyor
-            GlobalVariables_OPC_UA_client.cam_conv_x_pos = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.cam_conv_x_pos_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            GlobalVariables_OPC_UA_client.cam_conv_x_vel = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.cam_conv_x_vel_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            // Position / Velocity - XYZ Manipulator
-            GlobalVariables_OPC_UA_client.xyz_manip_pos[0] = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.xyz_manip_pos_node[0]).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            GlobalVariables_OPC_UA_client.xyz_manip_pos[1] = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.xyz_manip_pos_node[1]).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            GlobalVariables_OPC_UA_client.xyz_manip_pos[2] = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.xyz_manip_pos_node[2]).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            GlobalVariables_OPC_UA_client.xyz_manip_vel[0] = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.xyz_manip_vel_node[0]).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            GlobalVariables_OPC_UA_client.xyz_manip_vel[1] = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.xyz_manip_vel_node[1]).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            GlobalVariables_OPC_UA_client.xyz_manip_vel[2] = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.xyz_manip_vel_node[2]).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            // ---------- BOOL ---------- //
-            // Service Control
-            // Object
-            GlobalVariables_OPC_UA_client.gripp_attach = bool.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.gripp_node[0]).ToString());
-            GlobalVariables_OPC_UA_client.gripp_detach = bool.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.gripp_node[1]).ToString());
-            // Reset Environment
-            GlobalVariables_OPC_UA_client.reset_param = bool.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.reset_param_node).ToString());
-            // ---------- INT ---------- //
-            GlobalVariables_OPC_UA_client.set_obj_id = int.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.set_obj_id_node).ToString());
-            // ---------- BOOL ---------- //
-            // Camera Scan
-            GlobalVariables_OPC_UA_client.camera = bool.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.camera_node).ToString());
+
+            GlobalVariables_OPC_UA_client.rot_j1 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_j1_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+
+            /*
+            // Gripper
+            GlobalVariables_OPC_UA_client.gripper_speed = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.gripper_speed_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.gripper_stroke = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.gripper_stroke_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+           
+            // Workholder
+            GlobalVariables_OPC_UA_client.gapSize = bool.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.gapSize_node).ToString());
+            
+            // CNC SLV EDU
+            // GlobalVariables_OPC_UA_client.door_signal = bool.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.door_signal_node).ToString());
+
+            GlobalVariables_OPC_UA_client.pos_Xaxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.pos_Xaxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.pos_Yaxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.pos_Yaxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.pos_Zaxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.pos_Zaxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.rot_Aaxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_Aaxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.rot_Caxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_Caxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            
+            GlobalVariables_OPC_UA_client.speed_Xaxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_Xaxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_Yaxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_Yaxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_Zaxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_Zaxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_Aaxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_Aaxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_Caxis = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_Caxis_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            
+            // UR 10 ROBOT
+            GlobalVariables_OPC_UA_client.rot_j1 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_j1_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.rot_j2 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_j2_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.rot_j3 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_j3_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.rot_j4 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_j4_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.rot_j5 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_j5_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.rot_j6 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_j6_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            
+            GlobalVariables_OPC_UA_client.speed_j1 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j1_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_j2 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j2_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_j3 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j3_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_j4 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j4_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_j5 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j5_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            GlobalVariables_OPC_UA_client.speed_j6 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j6_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            */
 
             // Thread Sleep {2 ms}
             Thread.Sleep(2);
+            
+    
         }
     }
 
@@ -239,21 +303,26 @@ public class br_data_processing : MonoBehaviour {
             // OPCUa client configuration
             client_configuration_w = opcua_client_configuration();
             // Establishing communication
-            client_end_point_w = CoreClientUtils.SelectEndpoint("opc.tcp://" + ip_adr + ":" + port_adr, useSecurity: false, operationTimeout: 5000);
+            client_end_point_w = CoreClientUtils.SelectEndpoint("opc.tcp://" + ip_adr + ":" + port_adr, useSecurity: false); // , operationTimeout: 5000);
             // Create session
             client_session_w = opcua_create_session(client_configuration_w, client_end_point_w);
         }
 
         // Threading while {write data}
         while (GlobalVariables_Main_Control.enable_w) {
-            // -------------------- Sorting Machine Data -------------------- //
-            // Object ID (0 .. Number of objects)
-            opcua_write_value(client_session_w, GlobalVariables_OPC_UA_client.obj_id_w_node, GlobalVariables_OPC_UA_client.main_obj_id.ToString());
-            // Object Type (Type 1, Type 2, ..., Type Err.)
-            opcua_write_value(client_session_w, GlobalVariables_OPC_UA_client.obj_type_w_node, GlobalVariables_OPC_UA_client.main_obj_type.ToString());
+
+            // -------------------- Cube Position Data -------------------- //
+
+            /*
+            opcua_write_value(client_session_w, GlobalVariables_OPC_UA_client.cube_position_node, GlobalVariables_OPC_UA_client.cube_position.ToString());
+            opcua_write_value(client_session_w, GlobalVariables_OPC_UA_client.cube_scale_node, GlobalVariables_OPC_UA_client.cube_scale.ToString());
+            opcua_write_value(client_session_w, GlobalVariables_OPC_UA_client.door_signal_node, GlobalVariables_OPC_UA_client.door_signal.ToString());
+            */
 
             // Thread Sleep {10 ms}
             Thread.Sleep(10);
+            
+    
         }
     }
     // ------------------------ OPCUa Client {Application -> Configuration (STEP 1)} ------------------------//
@@ -261,7 +330,7 @@ public class br_data_processing : MonoBehaviour {
         // Configuration OPCUa Client {W/R -> Data}
         var config = new ApplicationConfiguration() {
             // Initialization (Name, Uri, etc.)
-            ApplicationName = "OPCUa_AS", // OPCUa AS (Automation Studio B&R)
+            ApplicationName = "OPCUa_AS", 
             ApplicationUri = Utils.Format(@"urn:{0}:OPCUa_AS", System.Net.Dns.GetHostName()),
             // Type -> Client
             ApplicationType = ApplicationType.Client,
@@ -341,4 +410,3 @@ public class br_data_processing : MonoBehaviour {
         }
     }
 }
-*/

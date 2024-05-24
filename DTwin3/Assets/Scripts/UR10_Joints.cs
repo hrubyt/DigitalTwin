@@ -2,52 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI.Table;
-/*
-public class UR10_Joints : MonoBehaviour {
-    [SerializeField] public float rot_j1 = 90f;
-    [SerializeField] public float rot_j2 = 180f;
-    [SerializeField] public float rot_j3 = 180f;
-    [SerializeField] public float rot_j4 = 180f;
-    [SerializeField] public float rot_j5 = 180f;
-    [SerializeField] public float rot_j6 = 180f;
-
-    public GameObject j1;
-    public GameObject j2;
-    public GameObject j3;
-    public GameObject j4;
-    public GameObject j5;
-    public GameObject j6;
-    //z,y,y,y,z,y
-
-    void FixedUpdate() {           
-        JointRotation(j1, 'z', rot_j1);
-        JointRotation(j2, 'y', rot_j2);
-        JointRotation(j3, 'y', rot_j3);
-        JointRotation(j4, 'y', rot_j4);
-        JointRotation(j5, 'z', rot_j5);
-        JointRotation(j6, 'y', rot_j6);
-        
-    }
-    
-    void JointRotation(GameObject joint, char axis, float rot) {
-
-        float xrot = 0.0f;
-        float yrot = 0.0f;
-        float zrot = 0.0f;
-
-        if (axis == 'y') {
-            yrot = rot;   
-        }
-        else if (axis == 'z'){ 
-            zrot = rot;
-        }
-
-        joint.transform.localEulerAngles = new Vector3(xrot, yrot, zrot);
-    }
-}
-*/
-
-//using UnityEngine;
 
 public class UR10_Joints : MonoBehaviour {
     // Rotations in joints

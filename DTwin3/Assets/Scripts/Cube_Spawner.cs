@@ -56,8 +56,6 @@ public class Cube_Spawner : MonoBehaviour {
         lastSpawnScale = randomScale;
     }
 
-    // Cube inforamtion
-    // (Vector3 position, Vector3 rotation, float scale) = cubeSpawner.CubeInfo();
     public (Vector3 position, Vector3 rotation, float scale) CubeInfo() {
         return (lastSpawnPosition, lastSpawnRotation, lastSpawnScale);
     }

@@ -3,7 +3,13 @@ guid: 449620adf5ab1fa46a1a00ca4eaaec08
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cube: {fileID: 6507533542732817522, guid: bb6a5b73f84e3744dbef0616121a80da, type: 3}
+  - workholder: {instanceID: 0}
+  - gripperFinger: {instanceID: 0}
+  - robotGripper: {instanceID: 0}
+  - cncDisc: {instanceID: 0}
+  - cubeSpawner: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

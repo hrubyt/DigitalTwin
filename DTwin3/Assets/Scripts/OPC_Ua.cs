@@ -22,12 +22,7 @@ public static class GlobalVariables_Main_Control {
 
 public static class GlobalVariables_OPC_UA_client {
 
-    // Test
-    public static float rot_j1;// = 90f;
-    public static NodeId rot_j1_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j1"; //prepsat podle struktury na serveru
-
-    //
-    /*
+    
     // gripper
     public static float gripper_speed;
     public static float gripper_stroke;
@@ -39,10 +34,10 @@ public static class GlobalVariables_OPC_UA_client {
     public static bool door_signal;
 
     // Node Ids
-    public static NodeId gripper_speed_node = "ns=3;s=::AsGlobalPV:dT_Main.gripper.gripper_speed";
-    public static NodeId gripper_stroke_node = "ns=3;s=::AsGlobalPV:dT_Main.gripper.gripper_stroke";
-    public static NodeId gapSize_node = "ns=3;s=::AsGlobalPV:dT_Main.gripper.signal";
-    public static string door_signal_node = "ns=3;s=::AsGlobalPV:dT_Main.door.signal";
+    public static NodeId gripper_speed_node = "ns=3;s=::Data_block:gripper_speed";
+    public static NodeId gripper_stroke_node = "ns=3;s=::Data_block:gripper_stroke";
+    public static NodeId gapSize_node = "ns=3;s=::Data_block:gripper_signal";
+    public static string door_signal_node = "ns=3;s=::Data_block:door_signal";
 
     // cube position, scale, rotation
     public static float cube_position;
@@ -50,9 +45,9 @@ public static class GlobalVariables_OPC_UA_client {
     public static float cube_rotation;
 
     // Node cube position, scale, rotation
-    public static string cube_position_node = "ns=3;s=::AsGlobalPV:dT_Main.cube.position";
-    public static string cube_scale_node = "ns=3;s=::AsGlobalPV:dT_Main.cube.scale";
-    public static string cube_rotation_node = "ns=3;s=::AsGlobalPV:dT_Main.cube.rotation";
+    public static string cube_position_node = "ns=3;s=::Data_block:cube_position";
+    public static string cube_scale_node = "ns=3;s=::Data_block:cube_scale";
+    public static string cube_rotation_node = "ns=3;s=::Data_block:cube_rotation";
 
     // additional variables
     public static float pos_Xaxis;// = 0.0f;
@@ -62,11 +57,11 @@ public static class GlobalVariables_OPC_UA_client {
     public static float rot_Caxis;// = 0.0f;
 
     // Nodes for additional variables
-    public static NodeId pos_Xaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.pos_Xaxis";
-    public static NodeId pos_Yaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.pos_Yaxis";
-    public static NodeId pos_Zaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.pos_Zaxis";
-    public static NodeId rot_Aaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_Aaxis";
-    public static NodeId rot_Caxis_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_Caxis";
+    public static NodeId pos_Xaxis_node = "ns=3;s=::Data_block:pos_Xaxis";
+    public static NodeId pos_Yaxis_node = "ns=3;s=::Data_block:pos_Yaxis";
+    public static NodeId pos_Zaxis_node = "ns=3;s=::Data_block:pos_Zaxis";
+    public static NodeId rot_Aaxis_node = "ns=3;s=::Data_block:rot_Aaxis";
+    public static NodeId rot_Caxis_node = "ns=3;s=::Data_block:rot_Caxis";
 
     // Rychlosti
     public static float speed_Xaxis;// = 0.5f;
@@ -76,11 +71,11 @@ public static class GlobalVariables_OPC_UA_client {
     public static float speed_Caxis;// = 0.5f;
 
     // Nodes for speed variables
-    public static NodeId speed_Xaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Xaxis";
-    public static NodeId speed_Yaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Yaxis";
-    public static NodeId speed_Zaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Zaxis";
-    public static NodeId speed_Aaxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Aaxis";
-    public static NodeId speed_Caxis_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_Caxis";
+    public static NodeId speed_Xaxis_node = "ns=3;s=::Data_block:speed_Xaxis";
+    public static NodeId speed_Yaxis_node = "ns=3;s=::Data_block:speed_Yaxis";
+    public static NodeId speed_Zaxis_node = "ns=3;s=::Data_block:speed_Zaxis";
+    public static NodeId speed_Aaxis_node = "ns=3;s=::Data_block:speed_Aaxis";
+    public static NodeId speed_Caxis_node = "ns=3;s=::Data_block:speed_Caxis";
 
 
 
@@ -94,12 +89,12 @@ public static class GlobalVariables_OPC_UA_client {
     public static float rot_j6;// = 180f;
 
     // Nodes for rotation variables
-    public static NodeId rot_j1_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j1";
-    public static NodeId rot_j2_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j2";
-    public static NodeId rot_j3_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j3";
-    public static NodeId rot_j4_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j4";
-    public static NodeId rot_j5_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j5";
-    public static NodeId rot_j6_node = "ns=3;s=::AsGlobalPV:dT_Main.rot_j6";
+    public static NodeId rot_j1_node = "ns=3;s=::Data_block:rot_j1";
+    public static NodeId rot_j2_node = "ns=3;s=::Data_block:rot_j2";
+    public static NodeId rot_j3_node = "ns=3;s=::Data_block:rot_j3";
+    public static NodeId rot_j4_node = "ns=3;s=::Data_block:rot_j4";
+    public static NodeId rot_j5_node = "ns=3;s=::Data_block:rot_j5";
+    public static NodeId rot_j6_node = "ns=3;s=::Data_block:rot_j6";
 
     // Speed of joints
     public static float speed_j1;// = 0.5f;
@@ -110,15 +105,15 @@ public static class GlobalVariables_OPC_UA_client {
     public static float speed_j6;// = 0.5f;
 
     // Nodes for speed of joints variables
-    public static NodeId speed_j1_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j1";
-    public static NodeId speed_j2_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j2";
-    public static NodeId speed_j3_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j3";
-    public static NodeId speed_j4_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j4";
-    public static NodeId speed_j5_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j5";
-    public static NodeId speed_j6_node = "ns=3;s=::AsGlobalPV:dT_Main.speed_j6";
+    public static NodeId speed_j1_node = "ns=3;s=::Data_block:speed_j1";
+    public static NodeId speed_j2_node = "ns=3;s=::Data_block:speed_j2";
+    public static NodeId speed_j3_node = "ns=3;s=::Data_block:speed_j3";
+    public static NodeId speed_j4_node = "ns=3;s=::Data_block:speed_j4";
+    public static NodeId speed_j5_node = "ns=3;s=::Data_block:speed_j5";
+    public static NodeId speed_j6_node = "ns=3;s=::Data_block:speed_j6";
     
 
-    */
+    
 
 }
 
@@ -249,9 +244,7 @@ public class data_processing : MonoBehaviour {
         // Threading while {read data}
         while (GlobalVariables_Main_Control.enable_r) {
 
-            GlobalVariables_OPC_UA_client.rot_j1 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.rot_j1_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-
-            /*
+            
             // Gripper
             GlobalVariables_OPC_UA_client.gripper_speed = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.gripper_speed_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
             GlobalVariables_OPC_UA_client.gripper_stroke = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.gripper_stroke_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
@@ -288,7 +281,7 @@ public class data_processing : MonoBehaviour {
             GlobalVariables_OPC_UA_client.speed_j4 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j4_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
             GlobalVariables_OPC_UA_client.speed_j5 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j5_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
             GlobalVariables_OPC_UA_client.speed_j6 = float.Parse(client_session_r.ReadValue(GlobalVariables_OPC_UA_client.speed_j6_node).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-            */
+            
 
             // Thread Sleep {2 ms}
             Thread.Sleep(2);
@@ -313,11 +306,11 @@ public class data_processing : MonoBehaviour {
 
             // -------------------- Cube Position Data -------------------- //
 
-            /*
+            
             opcua_write_value(client_session_w, GlobalVariables_OPC_UA_client.cube_position_node, GlobalVariables_OPC_UA_client.cube_position.ToString());
             opcua_write_value(client_session_w, GlobalVariables_OPC_UA_client.cube_scale_node, GlobalVariables_OPC_UA_client.cube_scale.ToString());
             opcua_write_value(client_session_w, GlobalVariables_OPC_UA_client.door_signal_node, GlobalVariables_OPC_UA_client.door_signal.ToString());
-            */
+            
 
             // Thread Sleep {10 ms}
             Thread.Sleep(10);

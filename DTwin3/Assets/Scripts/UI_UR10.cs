@@ -14,9 +14,6 @@ public class UI_UR10 : MonoBehaviour {
     public GameObject ui_UR10;
     public GameObject ui_Main;
     
-    
-    //[SerializeField] private InputField inputField;
-    //[SerializeField] private TMP_InputField inputField;
 
     [SerializeField] private UR10_Joints UR10_Joints;
 

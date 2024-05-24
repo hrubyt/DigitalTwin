@@ -34,13 +34,6 @@ public class Camera_Switcher : MonoBehaviour
     private static readonly Vector3 pos_C5 = new Vector3(-0.5f, 1.89999998f, 1.39999998f); // podobne
     private static readonly Vector3 rot_C5 = new Vector3(22.1700058f, 160.139984f, 0f);
 
-    //uvnitr cnc
-    //private static readonly Vector3 pos_C6 =new Vector3(0.0640859157f,1.23142922f,-1.10944641f);
-    //private static readonly Vector3 rot_C6 =new Vector3(20.4546299f,18.1504517f,-2.05026099e-05f);
-
-    //stolek + srovnavac
-    //private static readonly Vector3 pos_C7 = new Vector3(0.865678787f,1.08082795f,-0.756814957f);
-    //private static readonly Vector3 rot_C7 = new Vector3(34.9275169f, 359.552216f, -6.7963927e-05f);
 
     void Start()
     {

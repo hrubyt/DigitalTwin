@@ -5636,6 +5636,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1604697721}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &950065722
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950065718}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.080399975, y: 0.060900044, z: 0.04620948}
+  m_Center: {x: -0.0008583497, y: 0.008933078, z: 0.005}
 --- !u!1 &968823714
 GameObject:
   m_ObjectHideFlags: 0
@@ -7201,8 +7222,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449620adf5ab1fa46a1a00ca4eaaec08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cncDisc: {fileID: 501800718}
+  cube: {fileID: 0}
+  workholder: {fileID: 0}
+  gripperFinger: {fileID: 0}
   robotGripper: {fileID: 1604697722}
+  cncDisc: {fileID: 501800718}
   cubeSpawner: {fileID: 1614643582}
   attach_Gripper: 0
   attach_CNC: 0
@@ -10290,6 +10314,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 160065036}
+    - targetCorrespondingSourceObject: {fileID: -3526965602497726434, guid: ec922e0f27e591540b4df5deac17dfd9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 950065722}
     - targetCorrespondingSourceObject: {fileID: -5733364321890223561, guid: ec922e0f27e591540b4df5deac17dfd9,
         type: 3}
       insertIndex: -1
@@ -10352,7 +10380,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

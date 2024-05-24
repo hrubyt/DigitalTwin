@@ -36,10 +36,6 @@ public class UI_Main : MonoBehaviour
         // Invertuje aktuální stav aktivace objektu
         ui_open.SetActive(!ui_open.activeSelf);
 
-        /*if (ui_open.activeSelf){
-            ui_open.SetActive(false);
-        }
-        ui_open.SetActive(true);*/
     }
     
 }

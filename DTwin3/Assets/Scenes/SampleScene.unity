@@ -7223,8 +7223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 0}
-  workholder: {fileID: 0}
-  gripperFinger: {fileID: 0}
+  workholder: {fileID: 950065718}
+  gripperFinger: {fileID: 1604697724}
   robotGripper: {fileID: 1604697722}
   cncDisc: {fileID: 501800718}
   cubeSpawner: {fileID: 1614643582}
